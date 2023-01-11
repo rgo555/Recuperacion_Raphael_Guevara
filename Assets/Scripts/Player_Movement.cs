@@ -7,11 +7,11 @@ public class Player_Movement : MonoBehaviour
     [SerializeField]float speed;
     [SerializeField]float jumpForce;
 
-    //Awake
+
     private Rigidbody2D rb;
     private Animator anim;
     
-    //Ground Sensor 
+    
     bool isGrounded;
     [SerializeField]Transform groundSensor;
     [SerializeField]float sensorRadius;
@@ -25,7 +25,6 @@ public class Player_Movement : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
@@ -66,8 +65,7 @@ public class Player_Movement : MonoBehaviour
             anim.SetBool("Jump", false);
         }
     }
-    //Ave maria cuando seras mia
-    //Si me quisieras tooodo te daria
+  
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
